@@ -16,17 +16,17 @@ config <- dbConnect(RPostgres::Postgres(),
                          user='postgres',
                          password='UNyfDxQclkagFuWAA34M'
 )
-dbExecute(config,'CREATE TABLE local_news (
-  url CHAR,
-  by_line CHAR,
-  article_id VARCHAR(50),
-  source_url CHAR,
-  pub_date VARCHAR(25),
-  headline CHAR,
-  description CHAR,
-  content CHAR,
-  medium VARCHAR(12)
-)')
+#dbExecute(config,'CREATE TABLE local_news (
+#  url CHAR,
+#  by_line CHAR,
+#  article_id VARCHAR(50),
+#  source_url CHAR,
+#  pub_date VARCHAR(25),
+#  headline CHAR,
+#  description CHAR,
+#  content CHAR,
+#  medium VARCHAR(12)
+#)')
 craftURL <- function(day,timest){
   j<-tryCatch({
     j<-paste('https://api.goperigon.com/v1/all?type=local&from=',day,'T',timest,'&size=100&country=us&apiKey=56fb9eba-67d2-4f0d-94e8-a46cc4ab6f91',sep='')
