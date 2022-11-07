@@ -1,4 +1,4 @@
-FROM rocker/rstudio
+FROM rocker/tidyverse:4
 
 WORKDIR /app
 
