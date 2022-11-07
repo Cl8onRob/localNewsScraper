@@ -52,7 +52,7 @@ toDB <- function(jsn,config){
 repeat {
   toScrape<-craftURL(Sys.Date(),substr(Sys.time(),12,19))
   Sys.sleep(10800)#grabbing url then sleeping so that there is time to accumulate news
-  jsn<-read_json(toScrape)
+  jsn<-data.frame(fromJSON(toScrape)[3])
   toDB(jsn,config)
 }
   
