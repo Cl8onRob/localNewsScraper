@@ -8,4 +8,4 @@ RUN R -e "install.packages('RPostgres',dependencies=TRUE, repos='http://cran.rst
 
 COPY local_news_scraper.r .
 
-CMD ["R", "-f", "testing.r"]
+CMD ["R", "-f", "local_news_scraper.r"]
