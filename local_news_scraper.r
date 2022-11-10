@@ -43,7 +43,7 @@ craftURL <- function(day,timest){
 toDB <- function(jsn,config){
   for(i in 1:nrow(jsn)){ #remember first value is the row, second is the column
     dbExecute(config, "INSERT INTO local_news VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)",
-              list(jsn[i,1],jsn[i,2],jsn[i,3],jsn[i,5][1],jsn[i,9],jsn[i,12],jsn[i,13],jsn[i,14],jsn[i,15]))
+              list(jsn[i,1],jsn[i,2],jsn[i,3],jsn[i,5][1,1],jsn[i,9],jsn[i,12],jsn[i,13],jsn[i,14],jsn[i,15]))
 }
 }
 dbExecute(config,'DROP TABLE local_news')
