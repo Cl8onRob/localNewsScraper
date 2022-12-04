@@ -46,18 +46,18 @@ toDB <- function(jsn,config){
               list(jsn[i,1],jsn[i,2],jsn[i,3],jsn[i,5][1,1],jsn[i,9],jsn[i,12],jsn[i,13],jsn[i,14],jsn[i,15]))
 }
 }
-dbExecute(config,'DROP TABLE local_news')
-dbExecute(config,'CREATE TABLE local_news (
- url TEXT,
- by_line TEXT,
- article_id TEXT,
- source_url TEXT,
- pub_date TEXT,
- headline TEXT,
- description TEXT,
- content TEXT,
- medium TEXT
-)')
+#dbExecute(config,'DROP TABLE local_news')
+#dbExecute(config,'CREATE TABLE local_news (
+# url TEXT,
+# by_line TEXT,
+# article_id TEXT,
+# source_url TEXT,
+# pub_date TEXT,
+# headline TEXT,
+# description TEXT,
+# content TEXT,
+# medium TEXT
+#)')
   
 repeat {
   toScrape<-craftURL(Sys.Date(),substr(Sys.time(),12,19))
